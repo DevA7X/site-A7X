@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avenged Sevenfold</title>
+<div class="divider"></div>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background-color: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* MENU */
+
+    header{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px 60px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    header h1{
+      color: crimson;
+      letter-spacing: 3px;
+      font-size: 28px;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    nav a:hover{
+      color: crimson; 
+    }
+
+    /* HERO */
+
+    .hero{
+      height: 100vh;
+      background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+      url('img1');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content h2{
+      font-size: 90px;
+      color: white;
+      text-shadow: 0 0 20px crimson;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p{
+      font-size: 22px;
+      max-width: 900px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    /* SEÇÕES */
+
+    .member{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .member::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.3);
+      transform: scale(1.1);
+    }
+
+    .member-content{
+      position: relative;
+      z-index: 2;
+      background: rgba(0,0,0,0.7);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 900px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+
+    .member-content h2{
+      font-size: 50px;
+      color: crimson;
+      margin-bottom: 20px;
+    }
+
+    .member-content h3{
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .member-content p{
+      line-height: 1.8;
+      font-size: 18px;
+      color: #e5e5e5;
+    }
+
+    /* IMAGENS DOS MEMBROS */
+
+    .mshadows::before{
+      background-image: url('matt');
+    }
+
+    .synyster::before{
+      background-image: url('synG');
+    }
+
+    .zacky::before{
+      background-image: url('zacky');
+    }
+
+    .johnny::before{
+      background-image: url('jon');
+    }
+
+    .rev::before{
+      background-image: url('rev');
+    }
+   .albums-button{
+  min-height: 60vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+  url('albuns');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 40px;
+}
+.divider{
+  height: 200px;
+
+  background:
+  linear-gradient(to bottom, #000, rgba(0,0,0,0.4), #000),
+  url('img/divider.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  border-top: 2px solid crimson;
+  border-bottom: 2px solid crimson;
+
+  box-shadow:
+  0 0 30px rgba(220,20,60,0.5);
+}
+.albums-button{
+  min-height: 60vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+  url('albuns');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 40px;
+}
+
+.albums-button h2{
+  font-size: 45px;
+  margin-bottom: 40px;
+  max-width: 900px;
+  color: white;
+  text-shadow: 0 0 15px black;
+}
+
+.albums-button button{
+  padding: 20px 50px;
+  font-size: 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: crimson;
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-weight: bold;
+
+  box-shadow: 0 0 20px rgba(220,20,60,0.5);
+}
+
+.albums-button button:hover{
+  transform: scale(1.08);
+  background: darkred;
+
+  box-shadow: 0 0 30px rgba(220,20,60,0.8);
+}
+
+    footer{
+      background: #050505;
+      padding: 40px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer p{
+      color: #888;
+      font-size: 16px;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width: 900px){
+
+      .hero-content h2{
+        font-size: 50px;
+      }
+
+      .member{
+        padding: 40px 20px;
+      }
+
+      .member-content h2{
+        font-size: 35px;
+      }
+
+      header{
+        padding: 20px;
+      }
+
+      nav{
+        display: none;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- MENU -->
+
+  <header>
+    <h1>A7X</h1>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#mshadows">M. Shadows</a>
+      <a href="#synyster">Synyster Gates</a>
+      <a href="#zacky">Zacky Vengeance</a>
+      <a href="#johnny">Johnny Christ</a>
+      <a href="#rev">The Rev</a>
+    </nav>
+  </header>
+
+  <!-- TELA INICIAL -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-content">
+      <h2>AVENGED SEVENFOLD</h2>
+
+      <p>
+        Avenged Sevenfold é uma das maiores bandas de metal moderno do mundo,
+        conhecida por unir heavy metal, hard rock e elementos sinfônicos em músicas
+        extremamente marcantes. A banda surgiu em Huntington Beach, Califórnia,
+        conquistando milhões de fãs ao redor do planeta.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- M. SHADOWS -->
+
+  <section class="member mshadows" id="mshadows">
+
+    <div class="member-content">
+      <h2>M. Shadows</h2>
+      <h3>Vocalista Principal</h3>
+
+      <p>
+        Matthew Charles Sanders, conhecido mundialmente como M. Shadows,
+        é o vocalista principal do Avenged Sevenfold. Sua voz poderosa e versátil
+        se tornou uma das marcas registradas da banda. Desde os primeiros álbuns,
+        ele ajudou a construir a identidade agressiva e melódica do grupo.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- SYNYSTER -->
+
+  <section class="member synyster" id="synyster">
+
+    <div class="member-content">
+      <h2>Synyster Gates</h2>
+      <h3>Guitarrista Principal</h3>
+
+      <p>
+        Brian Haner Jr., mais conhecido como Synyster Gates,
+        é considerado um dos guitarristas mais talentosos do metal moderno.
+        Seus solos rápidos, técnicos e extremamente criativos deram ao Avenged Sevenfold
+        um estilo único e reconhecido mundialmente.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ZACKY -->
+
+  <section class="member zacky" id="zacky">
+
+    <div class="member-content">
+      <h2>Zacky Vengeance</h2>
+      <h3>Guitarrista Rítmico</h3>
+
+      <p>
+        Zacky Vengeance foi um dos fundadores da banda e desempenha um papel essencial
+        no peso e identidade sonora do Avenged Sevenfold. Seu estilo combina riffs pesados,
+        presença de palco intensa e grande influência no desenvolvimento visual da banda.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- JOHNNY -->
+
+  <section class="member johnny" id="johnny">
+
+    <div class="member-content">
+      <h2>Johnny Christ</h2>
+      <h3>Baixista</h3>
+
+      <p>
+        Johnny Christ assumiu o baixo da banda ainda jovem e rapidamente se tornou
+        uma peça importante no Avenged Sevenfold. Seu estilo energético e personalidade
+        forte ajudaram a consolidar a formação clássica da banda.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- THE REV -->
+
+  <section class="member rev" id="rev">
+
+    <div class="member-content">
+      <h2>Jimmy "The Rev" Sullivan</h2>
+      <h3>Baterista e Lenda da Banda</h3>
+
+      <p>
+        Jimmy Sullivan, conhecido como The Rev, foi um dos fundadores do Avenged Sevenfold
+        e uma das figuras mais importantes da história da banda. Seu talento na bateria,
+        criatividade musical e personalidade marcante transformaram completamente o som
+        do grupo. Mesmo após sua morte em 2009, The Rev continua sendo homenageado
+        pelos fãs e pelos integrantes como o coração eterno da banda.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- RODAPÉ -->
+<section class="albums-button">
+
+  <h2>Agora conheça os álbuns da banda e suas músicas mais famosas</h2>
+
+  <a href="albuns.html">
+    <button>VER ÁLBUNS</button>
+  </a>
+<a href="timeline.html">
+  <button>LINHA DO TEMPO DA BANDA</button>
+</a>
+</section>
+  <footer>
+    <p>
+      Site desenvolvido para trabalho escolar • Tema: Avenged Sevenfold
+    </p>
+  </footer>
+
+</body>
+</html>

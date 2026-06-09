@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Álbuns - Avenged Sevenfold</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#080808;
+      color:white;
+    }
+
+    /* TOPO */
+
+    .hero{
+      height:70vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+      url('img2');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:90px;
+      color:white;
+      text-shadow:0 0 20px crimson;
+    }
+
+    /* ALBUNS */
+
+    .album{
+      padding:80px;
+
+      border-bottom:1px solid rgba(255,255,255,0.1);
+
+      background:
+      linear-gradient(to bottom, #0a0a0a, #111);
+
+      display:flex;
+
+      align-items:center;
+
+      gap:50px;
+
+      flex-wrap:wrap;
+    }
+
+    /* IMAGEM DO ÁLBUM */
+
+    .album img{
+      width:350px;
+
+      border-radius:20px;
+
+      box-shadow:0 0 25px rgba(0,0,0,0.8);
+
+      transition:0.3s;
+    }
+
+    .album img:hover{
+      transform:scale(1.03);
+    }
+
+    /* TEXTO */
+
+    .album-content{
+      flex:1;
+      min-width:300px;
+    }
+
+    .album h2{
+      font-size:50px;
+      color:crimson;
+      margin-bottom:25px;
+    }
+
+    .album-info{
+      font-size:20px;
+      line-height:1.8;
+      color:#ddd;
+
+      max-width:1000px;
+
+      margin-bottom:40px;
+    }
+
+    /* MÚSICA */
+
+    .music-box{
+      background:rgba(255,255,255,0.05);
+
+      padding:35px;
+
+      border-left:5px solid crimson;
+
+      border-radius:15px;
+
+      max-width:900px;
+    }
+
+    .music-box h3{
+      font-size:32px;
+      margin-bottom:15px;
+    }
+
+    .music-box p{
+      font-size:18px;
+      line-height:1.7;
+      color:#ccc;
+    }
+
+    /* BOTÃO VOLTAR */
+
+    .back{
+      padding:60px;
+      text-align:center;
+    }
+
+    .back a{
+      text-decoration:none;
+    }
+
+    .back button{
+      padding:18px 45px;
+
+      border:none;
+
+      background:crimson;
+
+      color:white;
+
+      border-radius:10px;
+
+      cursor:pointer;
+
+      font-size:20px;
+
+      transition:0.3s;
+    }
+
+    .back button:hover{
+      transform:scale(1.08);
+      background:darkred;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:900px){
+
+      .hero h1{
+        font-size:50px;
+      }
+
+      .album{
+        padding:40px 20px;
+      }
+
+      .album h2{
+        font-size:35px;
+      }
+
+      .album img{
+        width:100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- TOPO -->
+
+  <section class="hero">
+
+    <h1>AVENGED SEVENFOLD</h1>
+
+  </section>
+
+  <!-- NIGHTMARE -->
+
+  <section class="album">
+
+    <img src="nightmare">
+
+    <div class="album-content">
+
+      <h2>Nightmare (2010)</h2>
+
+      <div class="album-info">
+
+        Nightmare foi lançado após a morte de Jimmy "The Rev" Sullivan,
+        tornando-se um dos álbuns mais emocionais da banda.
+        O disco mistura heavy metal, hard rock e metalcore melódico,
+        trazendo músicas extremamente pesadas e profundas.
+
+      </div>
+
+      <div class="music-box">
+
+        <h3>♫ Nightmare</h3>
+
+        <p>
+          A música fala sobre insanidade, sofrimento psicológico
+          e medo. Seu instrumental pesado e o refrão marcante
+          fizeram dela uma das músicas mais famosas do Avenged Sevenfold.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CITY OF EVIL -->
+
+  <section class="album">
+
+    <img src="city">
+
+    <div class="album-content">
+
+      <h2>City of Evil (2005)</h2>
+
+      <div class="album-info">
+
+        City of Evil marcou a evolução musical da banda,
+        trazendo solos mais técnicos, músicas longas
+        e forte influência do heavy metal clássico.
+
+      </div>
+
+      <div class="music-box">
+
+        <h3>♫ Bat Country</h3>
+
+        <p>
+          Inspirada em Fear and Loathing in Las Vegas,
+          a música representa caos, excessos e loucura.
+          É considerada uma das músicas mais icônicas da banda.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SELF TITLED -->
+
+  <section class="album">
+
+    <img src="a7x">
+
+    <div class="album-content">
+
+      <h2>Avenged Sevenfold (2007)</h2>
+
+      <div class="album-info">
+
+        Também conhecido como White Album,
+        esse disco mostrou o lado experimental da banda,
+        misturando metal, rock alternativo e elementos teatrais.
+
+      </div>
+
+      <div class="music-box">
+
+        <h3>♫ A Little Piece of Heaven</h3>
+
+        <p>
+          Uma música teatral e sombria que conta
+          uma história de amor obsessivo e macabro.
+          É uma das músicas mais diferentes e famosas da banda.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HAIL TO THE KING -->
+
+  <section class="album">
+
+    <img src="hailto">
+
+    <div class="album-content">
+
+      <h2>Hail to the King (2013)</h2>
+
+      <div class="album-info">
+
+        Hail to the King possui forte influência
+        do heavy metal clássico e trouxe músicas
+        mais simples, pesadas e grandiosas.
+
+      </div>
+
+      <div class="music-box">
+
+        <h3>♫ Hail to the King</h3>
+
+        <p>
+          A música aborda temas de poder,
+          guerra e dominação,
+          com riffs extremamente marcantes.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BOTÃO VOLTAR -->
+
+  <section class="back">
+
+    <a href="SITE1 A7X.html">
+      <button>VOLTAR AO SITE PRINCIPAL</button>
+    </a>
+
+  </section>
+
+</body>
+</html>

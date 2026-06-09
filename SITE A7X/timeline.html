@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Linha do Tempo - Avenged Sevenfold</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#070707;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* TOPO */
+
+    .hero{
+      height:70vh;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+      url('forever');
+
+      background-size:cover;
+      background-position:center;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:90px;
+      text-shadow:0 0 20px crimson;
+    }
+
+    /* IMAGEM */
+
+    .timeline-image{
+      padding:80px 20px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      background:#0b0b0b;
+    }
+
+    .timeline-image img{
+      width:100%;
+      max-width:1200px;
+
+      height:500px;
+
+      object-fit:cover;
+
+      border-radius:25px;
+
+      box-shadow:0 0 30px rgba(0,0,0,0.8);
+    }
+
+    /* TIMELINE */
+
+    .timeline{
+      max-width:1200px;
+
+      margin:auto;
+
+      padding:100px 20px;
+
+      display:flex;
+
+      flex-direction:column;
+
+      gap:40px;
+    }
+
+    /* EVENTOS */
+
+    .content{
+      padding:35px;
+
+      background:#111;
+
+      border-radius:20px;
+
+      box-shadow:0 0 25px rgba(0,0,0,0.7);
+
+      transition:0.3s;
+    }
+
+    .content:hover{
+      transform:scale(1.02);
+    }
+
+    .content h2{
+      color:crimson;
+
+      margin-bottom:20px;
+
+      font-size:40px;
+    }
+
+    .content p{
+      line-height:1.8;
+
+      color:#ddd;
+
+      font-size:18px;
+    }
+
+    /* CURIOSIDADES */
+
+    .fact-box{
+      margin-top:25px;
+
+      background:rgba(220,20,60,0.08);
+
+      padding:20px;
+
+      border-radius:12px;
+
+      box-shadow:0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .fact-box h3{
+      color:crimson;
+
+      margin-bottom:10px;
+
+      font-size:24px;
+    }
+
+    .fact-box p{
+      color:#ccc;
+
+      line-height:1.7;
+
+      font-size:16px;
+    }
+
+    /* VOLTAR */
+
+    .back{
+      padding:100px 20px;
+
+      text-align:center;
+
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+      url('URL_DA_IMAGEM_DO_BOTAO');
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .back h2{
+      font-size:55px;
+
+      margin-bottom:40px;
+    }
+
+    .back a{
+      text-decoration:none;
+    }
+
+    .back button{
+      padding:20px 50px;
+
+      border:none;
+
+      border-radius:12px;
+
+      background:crimson;
+
+      color:white;
+
+      font-size:20px;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .back button:hover{
+      transform:scale(1.08);
+
+      background:darkred;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:900px){
+
+      .hero h1{
+        font-size:50px;
+      }
+
+      .content h2{
+        font-size:30px;
+      }
+
+      .back h2{
+        font-size:35px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <!-- TOPO -->
+
+  <section class="hero">
+
+    <h1>LINHA DO TEMPO</h1>
+
+  </section>
+
+  <!-- IMAGEM -->
+
+  <section class="timeline-image">
+
+    <img src="URL_DA_IMAGEM_DA_TIMELINE">
+
+  </section>
+
+  <!-- TIMELINE -->
+
+  <section class="timeline">
+
+    <div class="content">
+
+      <h2>1999</h2>
+
+      <p>
+        O Avenged Sevenfold foi criado em Huntington Beach,
+        Califórnia, por M. Shadows, Zacky Vengeance,
+        The Rev e Matt Wendt.
+      </p>
+
+      <div class="fact-box">
+
+        <h3>Curiosidade</h3>
+
+        <p>
+          O nome "Avenged Sevenfold"
+          foi inspirado em uma passagem bíblica
+          do livro de Gênesis.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2001</h2>
+
+      <p>
+        A banda lançou seu primeiro álbum,
+        "Sounding the Seventh Trumpet".
+      </p>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2003</h2>
+
+      <p>
+        "Waking the Fallen"
+        trouxe reconhecimento mundial.
+      </p>
+
+      <div class="fact-box">
+
+        <h3>Você Sabia?</h3>
+
+        <p>
+          Synyster Gates entrou oficialmente
+          na banda pouco antes de
+          "Waking the Fallen".
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2005</h2>
+
+      <p>
+        "City of Evil" explodiu mundialmente
+        com músicas como "Bat Country".
+      </p>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2007</h2>
+
+      <p>
+        O álbum autointitulado
+        mostrou o lado experimental da banda.
+      </p>
+
+      <div class="fact-box">
+
+        <h3>Fato Interessante</h3>
+
+        <p>
+          "A Little Piece of Heaven"
+          foi escrita principalmente por The Rev.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2009</h2>
+
+      <p>
+        Jimmy "The Rev" Sullivan faleceu,
+        marcando profundamente a história da banda.
+      </p>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2010</h2>
+
+      <p>
+        "Nightmare" foi lançado
+        em homenagem à memória de The Rev.
+      </p>
+
+      <div class="fact-box">
+
+        <h3>Impacto Mundial</h3>
+
+        <p>
+          "Nightmare" estreou em primeiro lugar
+          na Billboard 200.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2013</h2>
+
+      <p>
+        "Hail to the King"
+        se tornou um enorme sucesso comercial.
+      </p>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2016</h2>
+
+      <p>
+        "The Stage"
+        trouxe temas futuristas
+        e existenciais.
+      </p>
+
+      <div class="fact-box">
+
+        <h3>Experimentalismo</h3>
+
+        <p>
+          "The Stage"
+          foi o primeiro álbum conceitual completo
+          da banda.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <h2>2023</h2>
+
+      <p>
+        A banda lançou
+        "Life Is But a Dream...",
+        um dos álbuns mais experimentais
+        da carreira.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- VOLTAR -->
+
+  <section class="back">
+
+    <h2>Voltar ao Site Principal</h2>
+
+    <a href="index.html">
+
+      <button>VOLTAR</button>
+
+    </a>
+
+  </section>
+
+</body>
+</html>
